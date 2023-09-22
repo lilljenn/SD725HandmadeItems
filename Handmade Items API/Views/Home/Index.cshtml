@@ -1,0 +1,315 @@
+﻿<script>
+    let id = 1000;
+    let itemName = "";
+    let description = "";
+    let size = "";
+    let color = "";
+
+    function zipCode() {
+
+        $("#zipCodeText").load("/home/getZipCode", function () {
+            if (document.getElementById("txtZipCode").value == "60302" || document.getElementById("txtZipCode").value == "60305") {
+                $("#zipCodeText").append("$5.");
+            }
+            else {
+                $("#zipCodeText").append("$10.");
+            }
+
+        });
+
+    }
+    function laborCost() {
+        $("#laborCostText").load("/home/getLaborCost", function () {
+            if (document.getElementById("rbHeadband").checked && document.getElementById("rbSmall").checked) {
+                $("#laborCostText").append("5 hours.");
+            }
+            else if (document.getElementById("rbHeadband").checked && document.getElementById("rbMedium").checked) {
+                $("#laborCostText").append("6 hours.");
+            }
+            else if (document.getElementById("rbHeadband").checked && document.getElementById("rbLarge").checked) {
+                $("#laborCostText").append("7 hours.");
+            }
+            else if (document.getElementById("rbHat").checked && document.getElementById("rbSmall").checked) {
+                $("#laborCostText").append("10 hours.");
+            }
+            else if (document.getElementById("rbHat").checked && document.getElementById("rbMedium").checked) {
+                $("#laborCostText").append("15 hours.");
+            }
+            else if (document.getElementById("rbHat").checked && document.getElementById("rbLarge").checked) {
+                $("#laborCostText").append("20 hours.");
+            }
+            else if (document.getElementById("rbBabyBlanket").checked && document.getElementById("rbSmall").checked) {
+                $("#laborCostText").append("100 hours.");
+            }
+            else if (document.getElementById("rbBabyBlanket").checked && document.getElementById("rbMedium").checked) {
+                $("#laborCostText").append("110 hours.");
+            }
+            else if (document.getElementById("rbBabyBlanket").checked && document.getElementById("rbLarge").checked) {
+                $("#laborCostText").append("120 hours.");
+            }
+            else if (document.getElementById("rbScarf").checked && document.getElementById("rbSmall").checked) {
+                $("#laborCostText").append("50 hours.");
+            }
+            else if (document.getElementById("rbScarf").checked && document.getElementById("rbMedium").checked) {
+                $("#laborCostText").append("60 hours.");
+            }
+            else if (document.getElementById("rbScarf").checked && document.getElementById("rbLarge").checked) {
+                $("#laborCostText").append("70 hours.");
+            }
+            else if (document.getElementById("rbMittens").checked && document.getElementById("rbSmall").checked) {
+                $("#laborCostText").append("10 hours.");
+            }
+            else if (document.getElementById("rbMittens").checked && document.getElementById("rbMedium").checked) {
+                $("#laborCostText").append("15 hours.");
+            }
+            else if (document.getElementById("rbMittens").checked && document.getElementById("rbLarge").checked) {
+                $("#laborCostText").append("20 hours.");
+            }
+            else if (document.getElementById("rbPillowCase").checked && document.getElementById("rbSmall").checked) {
+                $("#laborCostText").append("75 hours.");
+            }
+            else if (document.getElementById("rbPillowCase").checked && document.getElementById("rbMedium").checked) {
+                $("#laborCostText").append("85 hours.");
+            }
+            else if (document.getElementById("rbPillowCase").checked && document.getElementById("rbLarge").checked) {
+                $("#laborCostText").append("90 hours.");
+            }
+        });
+    }
+    function price() {
+        $("#priceText").load("/home/getPrice", function () {
+            if (document.getElementById("rbHeadband").checked && document.getElementById("rbSmall").checked) {
+                $("#priceText").append("$7.00.");
+            }
+            else if (document.getElementById("rbHeadband").checked && document.getElementById("rbMedium").checked) {
+                $("#priceText").append("$10.00.");
+            }
+            else if (document.getElementById("rbHeadband").checked && document.getElementById("rbLarge").checked) {
+                $("#priceText").append("12.00.");
+            }
+            else if (document.getElementById("rbHat").checked && document.getElementById("rbSmall").checked) {
+                $("#priceText").append("$15.00.");
+            }
+            else if (document.getElementById("rbHat").checked && document.getElementById("rbMedium").checked) {
+                $("#priceText").append("$17.00.");
+            }
+            else if (document.getElementById("rbHat").checked && document.getElementById("rbLarge").checked) {
+                $("#priceText").append("$22.00.");
+            }
+            else if (document.getElementById("rbBabyBlanket").checked && document.getElementById("rbSmall").checked) {
+                $("#priceText").append("$40.00.");
+            }
+            else if (document.getElementById("rbBabyBlanket").checked && document.getElementById("rbMedium").checked) {
+                $("#priceText").append("$45.00.");
+            }
+            else if (document.getElementById("rbBabyBlanket").checked && document.getElementById("rbLarge").checked) {
+                $("#priceText").append("$50.00.");
+            }
+            else if (document.getElementById("rbScarf").checked && document.getElementById("rbSmall").checked) {
+                $("#priceText").append("$27.00.");
+            }
+            else if (document.getElementById("rbScarf").checked && document.getElementById("rbMedium").checked) {
+                $("#priceText").append("$30.00.");
+            }
+            else if (document.getElementById("rbScarf").checked && document.getElementById("rbLarge").checked) {
+                $("#priceText").append("$35.00.");
+            }
+            else if (document.getElementById("rbMittens").checked && document.getElementById("rbSmall").checked) {
+                $("#priceText").append("$27.00.");
+            }
+            else if (document.getElementById("rbMittens").checked && document.getElementById("rbMedium").checked) {
+                $("#priceText").append("$30.00.");
+            }
+            else if (document.getElementById("rbMittens").checked && document.getElementById("rbLarge").checked) {
+                $("#priceText").append("$32.00.");
+            }
+            else if (document.getElementById("rbPillowCase").checked && document.getElementById("rbSmall").checked) {
+                $("#priceText").append("$27.00.");
+            }
+            else if (document.getElementById("rbPillowCase").checked && document.getElementById("rbMedium").checked) {
+                $("#priceText").append("$30.00.");
+            }
+            else if (document.getElementById("rbPillowCase").checked && document.getElementById("rbLarge").checked) {
+                $("#priceText").append("$32.00.");
+            }
+        });
+    }
+        function nameAndDescriptionOfItem() {
+            $("#nameAndDescriptionText").load("/home/getNameAndDescription", function () {
+                if (rbHeadband.checked) {
+                    itemName = "Headband";
+                    description = "A carefully made headband that comes in a variety of colors";
+                }
+                else if (rbHat.checked) {
+                    itemName = "Hat";
+                    description = "A warm hat made to keep you warm";
+                }
+                else if (rbBabyBlanket.checked) {
+                    itemName = "Baby Blanket";
+                    description = "A soft blanket designed for newborn babies";
+                }
+                else if (rbScarf.checked) {
+                    itemName = "Scarf";
+                    description = "A warm scarf suitable for any age";
+                }
+                else if (rbMittens.checked) {
+                    itemName = "Mittens";
+                    description = "Spacious mittens to keep your hands warm";
+                }
+                else if (rbPillowCase.checked) {
+                    itemName = "Pillow Case";
+                    description = "A soft covering for your bed pillow";
+                }
+                $("#nameAndDescriptionText").append(itemName + "<br/>" + description);
+            });
+        }
+            
+
+  
+    function colorOfItem() {
+        $("#colorText").load("/home/getColor", function () {
+            if (rbBlack.checked) {
+                color = "black"
+            }
+            else if (rbWhite.checked) {
+                color = "white"
+            }
+            else if (rbGrey.checked) {
+                color = "grey";
+            }
+            else if (rbBrown.checked) {
+                color = "brown";
+            }
+            else if (rbPurple.checked) {
+                color = "purple";
+            }
+            else if (rbYellow.checked) {
+                color = "yellow";
+            }
+            else if (rbBlue.checked) {
+                color = "blue";
+            }
+            $("#colorText").append(color);
+        });
+    }
+    function sizeOfItem() {
+        $("#sizeText").load("/home/getSize", function () {
+            if (rbSmall.checked) {
+                size = "small";
+            }
+            else if (rbMedium.checked) {
+                size = "medium";
+            }
+            else if (rbLarge.checked) {
+                size = "large";
+            }
+            $("#sizeText").append(size);
+        });
+    }
+    function productId() {
+        $("#idText").load("/home/getID", function () {
+            id += 1;
+            $("#idText").append(id);
+        });
+    }
+        function printProperties() {
+            nameAndDescriptionOfItem();
+            colorOfItem();
+            sizeOfItem();
+            productId();
+            laborCost();
+            price();
+        }
+ 
+    }
+
+</script>
+Please enter your zip code.
+<br />
+<input id="txtZipCode" type="text" value="" />
+<br />
+
+<input id="btnZipCode" type="button" value="Enter" onclick="zipCode()" />
+<br />
+<br />
+<div id="zipCodeText">
+    Shipping Cost
+</div>
+<br />
+Please choose an item.
+<br />
+<input id="rbHeadband" type="radio" value="headband" name="item" /> Headband
+<br />
+<input id="rbHat" type="radio" value="hat" name="item" /> Hat
+<br />
+<input id="rbBabyBlanket" type="radio" value="baby blanket" name="item" /> Baby Blanket
+<br />
+<input id="rbScarf" type="radio" value="scarf" name="item" /> Scarf
+<br />
+<input id="rbMittens" type="radio" value="mittens" name="item" /> Mittens
+<br />
+<input id="rbPillowCase" type="radio" value="pillow case" name="item" /> Pillow Case
+<br />
+<br />
+Please choose a size.
+<br />
+<input id="rbSmall" type="radio" value="small" name="size" /> Small
+<br />
+<input id="rbMedium" type="radio" value="medium" name="size" /> Medium
+<br />
+<input id="rbLarge" type="radio" value="large" name="size" /> Large
+<br />
+<input id="btnCalculateLaborCost" type="button" value="Calculate Labor Cost" onclick="laborCost()" />
+<input id="btnPrice" type="button" value="Calculate Price" onclick="price()" />
+<br/>
+<br/>
+<div id="laborCostText">
+    Labor Cost
+</div>
+<br/>
+<div id="priceText">
+    Price
+</div>
+<br />
+<br />
+
+Please select a color:
+<br />
+<input id="rbBlack" type="radio" value="black" name="color" /> Black
+<br/>
+<input id="rbWhite" type="radio" value="white" name="color" /> White
+<br/>
+<input id="rbGrey" type="radio" value="grey" name="color" /> Grey
+<br/>
+<input id="rbBrown" type="radio" value="brown" name="color" /> Brown
+<br/>
+<input id="rbPurple" type="radio" value="purple" name="color" /> Purple
+<br/>
+<input id="rbYellow" type="radio" value="yellow" name="color" /> Yellow
+<br/>
+<input id="rbBlue" type="radio" value="blue" name="color" /> Blue
+<br/>
+<br/>
+<div id="colorText">
+    Color
+</div>
+<br />
+<br />
+<div id="nameAndDescriptionText">
+    Name and Description
+</div>
+<br />
+<br />
+<div id="sizeText">
+    Size
+</div>
+<br/>
+<br/>
+<div id="idText">
+    Product ID
+</div>
+<br />
+<br/>
+<input id="btnPrintProperties" type="button" value="Print Properties" onclick="printProperties()" />
+<br />
+<br />
