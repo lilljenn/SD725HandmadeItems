@@ -10,22 +10,37 @@ namespace Handmade_Items_API.API
 {
     public class ProductController : ApiController
     {
+        // print list of products
         // GET: api/Product
-        public Products Get()
+        public List<Product> Get()
         {
             List<Product> _productList = new List <Product>();
             // This would come from a data source or data provider!!!!
-            _productList.Add(new Product("Headband", "A carefully made headband that comes in a variety of colors"));
-            _productList.Add(new Product("Hat", "A warm hat made to keep you warm"));
-            Products _products = new Products(_productList.ToArray());
-            return _products;
+            _productList.Add(new Product(1001, "Headband", "A carefully made headband that comes in a variety of colors", "Small", "Black"));
+            _productList.Add(new Product(1002, "Hat", "A warm hat made to keep you warm", "Medium", "White"));
+            
+            return _productList;
         }
+        // print product, according to id
         // GET: api/Product/5
-        public string Get(int id)
+     public Product GetProduct(int id)
         {
-            return "value";
-        }
+            Product product;
+            product = new Product(id, "name", "description", "size", "color");
+      
+            if (id == 1001)
+            {
+                product = new Product(1001, "Headband", "A carefully made headband that comes in a variety of colors", "Small", "Black");
+                          
+            }
+            if (id == 1002)
+            {
+                product = new Product(1002, "Hat", "A warm hat made to keep you warm", "Medium", "White");
+            }
 
+            return product;
+        }
+      
         // POST: api/Product
        public void Post([FromBody] string value) 
         { 

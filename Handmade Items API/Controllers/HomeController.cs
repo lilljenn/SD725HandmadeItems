@@ -9,6 +9,7 @@ namespace Handmade_Items_API.Controllers
 {
     public class HomeController : Controller
     {
+        // set messages for methods in Index to be retrieved from Views and called in Index (html)
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";

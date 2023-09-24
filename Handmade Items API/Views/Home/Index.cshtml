@@ -1,10 +1,12 @@
 ﻿<script>
+    // initialize properties 
     let id = 1000;
     let itemName = "";
     let description = "";
     let size = "";
     let color = "";
 
+    // find the cost of shipment, according to the zip code, retrieve text from the controller/view, and print the shipping cost
     function zipCode() {
 
         $("#zipCodeText").load("/home/getZipCode", function () {
@@ -16,8 +18,9 @@
             }
 
         });
-
     }
+
+    // find the labor cost of the item, according to the name and size of the item, retrieve text from the controller/view, and print the hours
     function laborCost() {
         $("#laborCostText").load("/home/getLaborCost", function () {
             if (document.getElementById("rbHeadband").checked && document.getElementById("rbSmall").checked) {
@@ -76,6 +79,8 @@
             }
         });
     }
+
+    // find the price of the item, according to the name and size of the item, retrieve text from the controller/view, and print the  price
     function price() {
         $("#priceText").load("/home/getPrice", function () {
             if (document.getElementById("rbHeadband").checked && document.getElementById("rbSmall").checked) {
@@ -134,6 +139,8 @@
             }
         });
     }
+
+    // get the name and description of the item, based on what radio button is checked, retrieve text from the controller/view, and print the name and the description
         function nameAndDescriptionOfItem() {
             $("#nameAndDescriptionText").load("/home/getNameAndDescription", function () {
                 if (rbHeadband.checked) {
@@ -162,10 +169,9 @@
                 }
                 $("#nameAndDescriptionText").append(itemName + "<br/>" + description);
             });
-        }
-            
+        }         
 
-  
+  // find the color of the item, based on what radio button is checked, retrieve text from the controller/view, and print the color
     function colorOfItem() {
         $("#colorText").load("/home/getColor", function () {
             if (rbBlack.checked) {
@@ -192,6 +198,8 @@
             $("#colorText").append(color);
         });
     }
+
+    // find the size of the item, based on what radio button is checked, retrieve text from the controller/view, and print the size
     function sizeOfItem() {
         $("#sizeText").load("/home/getSize", function () {
             if (rbSmall.checked) {
@@ -206,12 +214,15 @@
             $("#sizeText").append(size);
         });
     }
+
+    // increment the product id by 1 when called by printProperties(), retrieve text from the controller/view, and print the id
     function productId() {
         $("#idText").load("/home/getID", function () {
             id += 1;
             $("#idText").append(id);
         });
     }
+    // print properties to html text by calling individual methods
         function printProperties() {
             nameAndDescriptionOfItem();
             colorOfItem();
@@ -221,7 +232,7 @@
             price();
         }
  
-    }
+    
 
 </script>
 Please enter your zip code.
