@@ -83,3 +83,25 @@ C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items A
 C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\obj\Debug\Handmade Items API.csproj.CopyComplete
 C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\obj\Debug\Handmade Items API.dll
 C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\obj\Debug\Handmade Items API.pdb
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Buffers.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Memory.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Numerics.Vectors.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Text.Encodings.Web.dll
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Buffers.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Memory.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Numerics.Vectors.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Jenni\OneDrive\Desktop\source\repos\Handmade Items API\Handmade Items API\bin\System.Text.Encodings.Web.xml
